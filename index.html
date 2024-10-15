@@ -7,38 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-
-</header>
-<div id="headerFlex">
-     <div id="logo">
-     <img src="assets/epicode_logo.png" alt="">
-     </div>
-     <div class="timer">
-     <p style="margin-top: 12px;">bseconds </p>
-     <p id="Numero">16</p>
-     <p>remaining</p>
-     </div>
-</div>
 
 
-<div id="domanda">
-    <h1>What does CPU stand for?</h1>
-    <div class="bottoni">
-        <div>
-         <button class="risposte" onclick="risposteSbagliate ()" >central Process Unit</button>
-         <button class="risposte" onclick="risposteSbagliate ()">Computer Personal Unit</button>
+<section id="pagina1" class="active">
+
+    <div id="container-principale" >
+        <section>
+          <!--logo section-->
+          <img src="assets/epicode_logo.png" alt="logo-epicode" id="logo">
+          <!--titles section-->
+          <h1>Welcome to  <span id="bold-title"><br> your exam</span></h1>
+          <h2>Instructions</h2>
+          <!--paragrafi section-->
+          <p>We don't expect most enigineers to know the answers to all of these <br> questions, so dont't worry if you're unsure of a few of them.</p>
+        </section>
+        
+    <!--list section-->
+    <section>
+        <ul>
+            <li>Each question is <span class="bold-span">timed</span> and can only <span class="bold-span">be answered once</span></li>
+            <li>Changing browser tab or opening other windows will <span class="bold-span">invalidate the question.</span></li>
+            <li>This exam will take approx. <span class="bold-span">0-5 minutes.</span></li>
+        </ul>
+    </section>
+    </div>
+
+<!--ceck section-->
+<section>
+    <div  id="check-section">
+        <input type="checkbox"><p>I promise to answer myself without help from anyone</p>
+        <button onclick="avanti('secondaSchermata')" id="proceed-button">procedi</button>
+      </div>
+</section>
+
+
+
+
+</section>
+
+<section class="quizSection" id="secondaSchermata">
+    <div id="headerFlex">
+        <div id="logo">
+         <img src="assets/epicode_logo.png" alt="">
         </div>
-        <div>
-         <button id="risposteCorrette" onclick="RispostaGiusta()">Central Processing Unit</button>
-         <button class="risposte" onclick="risposteSbagliate ()">Central Processor Unit</button>
+        <div class="timer">
+         <p style="margin-top: 12px;">bseconds </p>
+         <p id="Numero">16</p>
+         <p>remaining</p>
         </div>
     </div>
 
- 
-</div>
+    <div id="domanda">
+     <h1>What does CPU stand for?</h1>
+        <div class="bottoni">
+            <div>
+             <button class="risposte" onclick="risposteSbagliate ()" >central Process Unit</button>
+             <button class="risposte" onclick="risposteSbagliate ()">Computer Personal Unit</button>
+            </div>
+            <div>
+             <button id="risposteCorrette" onclick="RispostaGiusta()">Central Processing Unit</button>
+             <button class="risposte" onclick="risposteSbagliate ()">Central Processor Unit</button>
+            </div>
+        </div>
+    </div>
 
-<footer>
     <div class="footerFlex">
         <div>
          QUESTION
@@ -51,6 +83,7 @@
         </div>
     </div>
 </footer>
+</section>
 </body>
 <script src="script.js"></script>
 </html>
