@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(./asset/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    margin: 0;
+}
+
+#container-principale {
+    align-items: center;
+}
+
+
+
+#logo {
+    width: 160px;
+    height: 50px;
+    margin-left: 80px;
+    padding: 30px;
+}
+
+h1 {
+    color: white;
+    margin-left: 120px;
+    font-family: inter;
+}
+
+#bold-title {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Outfit;
+}
+
+h2 {
+    color: #D20094;
+    margin-top: 15px;
+    margin-left: 120px;
+    font-family: Outfit;
+}
+
+p {
+    color: white;
+    margin-left: 120px;
+    font-family: inter;
+}
+
+ul {
+    color: white;
+    margin-top: 50px;
+    margin-left: 97px;
+    font-family: inter;
+}
+
+#check-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+#check-section p {
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+input {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#proceed-button {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 15px 40px;
+    background-color: #00FFFF;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: black;
+    outline: none;
+    border-style: none;
+    font-weight: bold;
+    margin-left: 600px;
+    cursor: pointer;
+}
+
+/* stile per i question button*/
+
+#questions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#column-div-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    width: 20%;
+}
+
+#column-div-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    width: 20%;
+}
+
+/* Stile per i pulsanti */
+.questions-button {
+    background-color: #2a2f58;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    outline-style: 1px solid, white;
+}
+
+.questions-button:hover {
+    background-color: #ff3ba7;
+}

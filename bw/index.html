@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--outfit FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--inter FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container-principale" >
+        <section>
+          <!--logo section-->
+          <img src="./asset/epicode_logo.png" alt="logo-epicode" id="logo">
+          <!--titles section-->
+          <h1>Welcome to  <span id="bold-title"><br> your exam</span></h1>
+          <h2>Instructions</h2>
+          <!--paragrafi section-->
+          <p>We don't expect most enigineers to know the answers to all of these <br> questions, so dont't worry if you're unsure of a few of them.</p>
+        </section>
+        
+    <!--list section-->
+    <section>
+        <ul>
+            <li>Each question is <span class="bold-span">timed</span> and can only <span class="bold-span">be answered once</span></li>
+            <li>Changing browser tab or opening other windows will <span class="bold-span">invalidate the question.</span></li>
+            <li>This exam will take approx. <span class="bold-span">0-5 minutes.</span></li>
+        </ul>
+    </section>
+    </div>
+
+<!--ceck section-->
+<section>
+    <div  id="check-section">
+        <input type="checkbox"><p>I promise to answer myself without help from anyone</p>
+        <button id="proceed-button">PROCEED</button>
+      </div>
+</section>
+
+<!--question section-->
+<section>
+    <h1 id="questions-title"> <span id="bold-questions-title"></span></h1>
+    <div id="questions-container">
+        <div id="column-div-1">
+            <button class="questions-button"></button>
+            <button class="questions-button"></button>
+        </div>
+        <div id="column-div-2">
+            <button class="questions-button"></button>
+            <button class="questions-button"></button>
+        </div>
+    </div>
+</section>
+
+</body>
+<script src="./script.js"></script>
+</html>
