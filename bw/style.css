@@ -24,7 +24,7 @@ body {
     padding: 30px;
 }
 
-h1 {
+#welcome-title {
     color: white;
     margin-left: 120px;
     font-family: inter;
@@ -94,6 +94,8 @@ input {
 #questions-title {
     margin-bottom: 20px;
     text-align: center;
+    color: white;
+    font-weight: 400;
     font-family: inter;
 }
 
@@ -139,9 +141,16 @@ input {
     background-color: #ff3ba7;
 }
 
+#risultato {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+
 /*stili dinamici per section*/
 
 #quiz-dinamic-section {
     display: none;
 }
-  
