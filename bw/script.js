@@ -97,3 +97,12 @@
         incorrect_answers: ["Python", "C", "Jakarta"],
       },
     ];
+
+//funzione per cambiare la schermata
+function cambiaSchermata(){
+  //nascondere gli elementi che non ci servono
+  document.getElementById("welcome-section").style.display = "none";
+
+  // mostrare la sezione del quiz
+  document.getElementById("quiz-dinamic-section").style.display = "block";
+}
