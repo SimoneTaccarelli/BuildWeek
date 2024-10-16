@@ -1,4 +1,4 @@
-   const questions = [
+const questions = [
       {
         category: "Science: Computers",
         type: "multiple",
@@ -115,8 +115,6 @@ function cambiaSchermata(){
   mostraDomanda();
 }
 
-//array di titoli e domande dinamico
-
 // function per mostrare domanda e risposte
 function mostraDomanda() {
   const domanda = document.getElementById("questions-title");
@@ -132,10 +130,30 @@ function mostraDomanda() {
     let allAnswers = [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers];
     allAnswers.sort(() => Math.random() - 0.5);  // mescolare le risposte
 
-    // iniettare le risposte nei pulsanti
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].textContent = allAnswers[i];
-      buttons[i].onclick = () => checkAnswer(allAnswers[i], currentQuestion.correct_answer);   
+
+    // numero corretto di pulsanti e assegnazione delle risposte
+    if (allAnswers.length === 2) {
+      // nascondere i primi due pulsanti e mostrare solo due
+      document.getElementById("column-div-1").style.display = "none";  
+      document.getElementById("column-div-2").style.display = "block"; 
+
+      // si aggiornano solo i due pulsanti visibili
+      for (let i = 0; i < 2; i++) {
+        buttons[i + 2].style.display = "block";  // visibilità button
+        buttons[i + 2].textContent = allAnswers[i]; // vale solo per i pulsanti della seconda colonna
+        buttons[i + 2].onclick = () => checkAnswer(allAnswers[i], currentQuestion.correct_answer);
+      }
+    } else {
+      // mostrare tutti i pulsanti in caso di domande con quattro risposte
+      document.getElementById("column-div-1").style.display = "block"; 
+      document.getElementById("column-div-2").style.display = "block"; 
+
+      // aggiornare tutti i button con le risposte
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = "block";  
+        buttons[i].textContent = allAnswers[i];  // inietta una risposta per ogni pulsante
+        buttons[i].onclick = () => checkAnswer(allAnswers[i], currentQuestion.correct_answer);
+      }
     }
 
     // incremento per l'indice per della prossima domanda
@@ -146,22 +164,39 @@ function mostraDomanda() {
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].style.display = "none";  
     }
+
+
+      // mostrare il risultato finale
+  const risultato = document.getElementById("risultato");
+  risultato.textContent = "Hai risposto correttamente a"  + " " + score + " domande"; //mostra il risultato della somma delle domande
+
   }
+
 }
 
-//controllare la risposta selezionata e SE è corretta si assegna 1 punto, SE sbagliata 0 punti
+// controllo della risposta selezionata
 function checkAnswer(selectedAnswer, correctAnswer) {
   if (selectedAnswer === correctAnswer) {
     score += 1;
   } else {
    score += 0;
+
   }
 
-  // mostrare la prossima domanda
+
+  // Mostra la prossima domanda
   mostraDomanda();
 }
 
-        
+
+   
+     
+   
+
+
+
+
+  
        
         
       
