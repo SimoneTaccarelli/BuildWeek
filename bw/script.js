@@ -1,4 +1,4 @@
-    const questions = [
+   const questions = [
       {
         category: "Science: Computers",
         type: "multiple",
@@ -98,11 +98,72 @@
       },
     ];
 
-//funzione per cambiare la schermata
+
+// contatore per tenere traccia della domanda corrente
+let currentQuestionIndex = 0;
+let score = 0; //variabile per accumulare il punteggio
+
+
+
 function cambiaSchermata(){
   //nascondere gli elementi che non ci servono
   document.getElementById("welcome-section").style.display = "none";
 
   // mostrare la sezione del quiz
   document.getElementById("quiz-dinamic-section").style.display = "block";
+
+  mostraDomanda();
 }
+
+//array di titoli e domande dinamico
+
+// function per mostrare domanda e risposte
+function mostraDomanda() {
+  const domanda = document.getElementById("questions-title");
+  const buttons = document.getElementsByClassName("questions-button");
+
+  // controllare se ci sono altre domande disponibili
+  if (currentQuestionIndex < questions.length) {
+    // mostrare la domanda corrente
+    let currentQuestion = questions[currentQuestionIndex];
+    domanda.textContent = currentQuestion.question;
+
+    // mescolare le varie risposte 
+    let allAnswers = [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers];
+    allAnswers.sort(() => Math.random() - 0.5);  // mescolare le risposte
+
+    // iniettare le risposte nei pulsanti
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].textContent = allAnswers[i];
+      buttons[i].onclick = () => checkAnswer(allAnswers[i], currentQuestion.correct_answer);   
+    }
+
+    // incremento per l'indice per della prossima domanda
+    currentQuestionIndex++;
+  } else {
+    // al termine del quiz mostrare un messaggio finale
+    domanda.textContent = "Quiz terminato!";
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.display = "none";  
+    }
+  }
+}
+
+//controllare la risposta selezionata e SE è corretta si assegna 1 punto, SE sbagliata 0 punti
+function checkAnswer(selectedAnswer, correctAnswer) {
+  if (selectedAnswer === correctAnswer) {
+    score += 1;
+  } else {
+   score += 0;
+  }
+
+  // mostrare la prossima domanda
+  mostraDomanda();
+}
+
+        
+       
+        
+      
+
+  
