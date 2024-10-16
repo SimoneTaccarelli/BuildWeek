@@ -16,39 +16,42 @@
 </head>
 <body>
     <div id="container-principale" >
-        <section>
-          <!--logo section-->
-          <img src="./asset/epicode_logo.png" alt="logo-epicode" id="logo">
+         <!--logo section-->
+         <img src="./asset/epicode_logo.png" alt="logo-epicode" id="logo">
+
+        <!--static-section-->
+        <section id="welcome-section"> 
           <!--titles section-->
-          <h1>Welcome to  <span id="bold-title"><br> your exam</span></h1>
+          <h1 id="welcome-title">Welcome to  <span id="bold-title"><br> your exam</span></h1>
           <h2>Instructions</h2>
           <!--paragrafi section-->
           <p>We don't expect most enigineers to know the answers to all of these <br> questions, so dont't worry if you're unsure of a few of them.</p>
-        </section>
-        
+       
     <!--list section-->
-    <section>
+   
         <ul>
             <li>Each question is <span class="bold-span">timed</span> and can only <span class="bold-span">be answered once</span></li>
             <li>Changing browser tab or opening other windows will <span class="bold-span">invalidate the question.</span></li>
             <li>This exam will take approx. <span class="bold-span">0-5 minutes.</span></li>
         </ul>
-    </section>
-    </div>
+  
 
 <!--ceck section-->
-<section>
+
     <div  id="check-section">
         <input type="checkbox"><p>I promise to answer myself without help from anyone</p>
-        <button id="proceed-button">PROCEED</button>
+        <button id="proceed-button" onclick="cambiaSchermata()">PROCEED</button>
       </div>
 </section>
 
-<!--question section-->
-<section>
-    <h1 id="questions-title"> <span id="bold-questions-title"></span></h1>
+</div>
+          
+<!--question-dinamic-section-->
+<section id="quiz-dinamic-section">
+    <h1 id="questions-title"></h1>
+
     <div id="questions-container">
-        <div id="column-div-1">
+      <div id="column-div-1">
             <button class="questions-button"></button>
             <button class="questions-button"></button>
         </div>
@@ -56,9 +59,17 @@
             <button class="questions-button"></button>
             <button class="questions-button"></button>
         </div>
-    </div>
 </section>
+<p id="risultato"></p>
 
 </body>
 <script src="./script.js"></script>
 </html>
+
+
+
+
+
+
+
+
