@@ -19,7 +19,7 @@ body {
 
 #logo {
     width: 160px;
-    height: 50px;
+
     margin-left: 80px;
     padding: 30px;
 }
@@ -28,6 +28,8 @@ h1 {
     color: white;
     margin-left: 120px;
     font-family: inter;
+    font-weight: 400;
+    font-size: 80px;
 }
 
 #bold-title {
@@ -87,8 +89,15 @@ input {
     cursor: pointer;
 }
 
-/* stile per i question button*/
+/*stili h1-span dinamic*/
 
+#questions-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: inter;
+}
+
+/*stili container e button dinamic*/
 #questions-container {
     display: flex;
     justify-content: center;
@@ -112,22 +121,27 @@ input {
     width: 20%;
 }
 
-/* Stile per i pulsanti */
 .questions-button {
     background-color: #2a2f58;
     border: none;
-    border-radius: 30px;
-    padding: 15px 20px;
-    font-size: 1rem;
+    border-radius: 50px;
+    font-size: 16px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 10px;
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 50px;
     outline-style: 1px solid, white;
 }
 
 .questions-button:hover {
     background-color: #ff3ba7;
 }
+
+/*stili dinamici per section*/
+
+#quiz-dinamic-section {
+    display: none;
+}
+  
