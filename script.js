@@ -123,7 +123,7 @@ function mostraDomanda() {
   // controllare se ci sono altre domande disponibili
   if (currentQuestionIndex < questions.length) {
     // mostrare la domanda corrente
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = questions.sort(() => Math.random() - 0.5)[currentQuestionIndex];
     domanda.textContent = currentQuestion.question;
 
     // mescolare le varie risposte 
